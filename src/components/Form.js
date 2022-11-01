@@ -46,7 +46,7 @@ function Form() {
 
       }
     } else if (serverResponseJSON.result === 'success'){
-      document.querySelector('.errorModalText').innerHTML = `<p className="errorModalText"><strong>Voto registrado, </strong>¡Muchas gracias por votar!</p> <ReloadBtn />`;
+      document.querySelector('.errorModalText').innerHTML = `<p className="errorModalText"><strong>Voto registrado, </strong>¡Muchas gracias por participar!</p> <ReloadBtn />`;
       
     }
 
