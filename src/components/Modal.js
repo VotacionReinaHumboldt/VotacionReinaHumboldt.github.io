@@ -4,7 +4,7 @@ import { useEffect, useContext } from "react";
 import { mailContext } from "../context/mailContext.js";
 import './Modal.css';
 
-const google = window.google;
+/*global google*/
 
 export function Modal() {
 
