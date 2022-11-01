@@ -2,7 +2,7 @@
   "name": "votacion-reina-humboldt-2022",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://VotacionReinaHumboldt.github.io/",
+  "homepage": "./",
   "dependencies": {
     "@react-oauth/google": "^0.2.8",
     "@testing-library/jest-dom": "^5.16.5",
