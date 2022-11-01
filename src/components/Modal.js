@@ -26,6 +26,11 @@ export function Modal() {
       { theme: "outline", size: "large", text: "singin_with", shape: "pill"}  // customization attributes
     );
     
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+
     document.querySelector('.modalBackdrop').style.display = 'block'
     document.querySelector('body').style['overflow-y'] = 'hidden';
   }, []);
