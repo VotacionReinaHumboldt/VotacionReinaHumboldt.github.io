@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.2dd00f7c.css",
-    "main.js": "./static/js/main.8826ed00.js",
+    "main.js": "./static/js/main.08657bd1.js",
     "static/media/backgroundHumboldt.jpg": "./static/media/backgroundHumboldt.988d8fbcb82945c8e32e.jpg",
     "index.html": "./index.html",
     "main.2dd00f7c.css.map": "./static/css/main.2dd00f7c.css.map",
-    "main.8826ed00.js.map": "./static/js/main.8826ed00.js.map"
+    "main.08657bd1.js.map": "./static/js/main.08657bd1.js.map"
   },
   "entrypoints": [
     "static/css/main.2dd00f7c.css",
-    "static/js/main.8826ed00.js"
+    "static/js/main.08657bd1.js"
   ]
 }
