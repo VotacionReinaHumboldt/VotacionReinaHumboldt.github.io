@@ -1,0 +1,22 @@
+.errorModalReloadBtn
+{
+  background-color: #EF233C;
+  margin-top: 1.5rem;
+  height: 3rem;
+  width: 30%;
+  min-width: fit-content;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+
+@media (hover: hover) {
+  .errorModalReloadBtn:hover 
+  {
+    background-color: #D90429;
+    transform: scale(1.01);
+  }
+}

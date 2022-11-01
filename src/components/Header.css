@@ -1,0 +1,25 @@
+.pageHeader
+{
+  background-color: #edf2f455;
+  width: 90%;
+  box-sizing: border-box;
+  margin: 1rem auto 2rem;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  backdrop-filter: blur(5px);
+}
+
+.pageTitle
+{
+  text-align: center;
+  line-height: 1.1;
+  font-size: 2rem;
+}
+
+.pageDescription
+{
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.35rem;
+  line-height: 1.3;
+}

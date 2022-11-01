@@ -1,0 +1,23 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  transition: 0.25s ease all;
+  font-family: 'Lato', sans-serif;
+  color: #202020;
+}
+
+body{
+  background: rgb(131,58,180);
+  background: url('../public/images/backgroundHumboldt.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 800px) {
+  body
+  {
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}

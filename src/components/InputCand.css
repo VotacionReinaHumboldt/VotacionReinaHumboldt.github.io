@@ -1,0 +1,88 @@
+.inputDiv
+{
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 10px #222;
+}
+
+.inputDiv *
+{
+  user-select: none;
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none;
+}
+
+.inputLabel
+{
+  height: 100%;
+  display: flex;
+}
+
+.inputImage
+{
+  width: 100%;
+  border-bottom: 2px solid #000;
+  cursor: pointer;
+  background-color: #2b2d42;
+}
+
+.inputText
+{
+  padding: 0.5rem 0.75rem;
+  height: 100%;
+}
+
+.inputName
+{
+  margin-bottom: 0.75em;
+}
+
+.inputName,
+.inputCorp
+{
+  color: #edf2f4;
+  font-size: 1.15rem;
+}
+
+.inputLabel > div 
+{
+  border: 2px solid #000;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: #2b2d42;
+  color: #EDF2F4;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .inputDiv:hover
+  {
+    transform: scale(1.01);
+    box-shadow: 0 0 20px #222;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .inputDiv
+  {
+    width: 30%;
+    margin: none;
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+  .inputDiv
+  {
+    width: 20%;
+    margin: none;
+  }
+}

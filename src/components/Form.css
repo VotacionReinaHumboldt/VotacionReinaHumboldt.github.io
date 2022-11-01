@@ -1,0 +1,64 @@
+input:checked + .inputLabel > div{
+  background: #d90427;
+}
+
+.voteForm
+{
+  background: #edf2f455;
+  width: 90%;
+  height: 100%;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-sizing: border-box;
+  margin: 1rem auto 2rem;
+}
+
+.buttonContainer
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.submitForm
+{
+  width: 50%;
+  line-height: 2.1;
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  margin: 1rem auto 2rem;
+  background-color: #EF233C;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .voteForm
+  {
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .submitForm
+  {
+    width: 20%;
+    margin: 1rem auto;
+    align-self: flex-end;
+    justify-self: flex-start;
+    display: block;
+  }
+}
+
+@media (hover: hover) {
+  .submitForm:hover 
+  {
+    background-color: #D90429;
+    transform: scale(1.01);
+  }
+}
