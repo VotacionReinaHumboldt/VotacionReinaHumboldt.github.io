@@ -11,6 +11,8 @@ export function Modal() {
   const { setMail } = useContext(mailContext);
   let updater = '';
 
+  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
   useEffect(() => {
     function handleCredentialResponse(response) {
       let data = jwt_decode(response.credential);
@@ -19,18 +21,25 @@ export function Modal() {
       document.querySelector('body').style['overflow-y'] = 'auto';
     }
 
-    if(!google.accounts){
-      setTimeout(()=>{updater+='a'; console.log('updated'); return;}, 1000)
+    const initGoogle = async() => {
+      if(typeof google === 'undefined'){
+        await delay(1000);
+        console.log('updated');
+        initGoogle();
+        return;
+      }
+
+      google.accounts.id.initialize({
+        client_id: process.env.REACT_APP_GOOGLEID,
+        callback: handleCredentialResponse
+      });
+      google.accounts.id.renderButton(
+        document.getElementById("buttonDiv"),
+        { theme: "outline", size: "large", text: "singin_with", shape: "pill"}  // customization attributes
+      );
     }
 
-    google.accounts.id.initialize({
-      client_id: process.env.REACT_APP_GOOGLEID,
-      callback: handleCredentialResponse
-    });
-    google.accounts.id.renderButton(
-      document.getElementById("buttonDiv"),
-      { theme: "outline", size: "large", text: "singin_with", shape: "pill"}  // customization attributes
-    );
+    initGoogle();
     
     window.scrollTo({
       top: 0,
