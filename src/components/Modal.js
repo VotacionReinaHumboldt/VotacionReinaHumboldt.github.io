@@ -9,6 +9,7 @@ import './Modal.css';
 export function Modal() {
 
   const { setMail } = useContext(mailContext);
+  let updater = '';
 
   useEffect(() => {
     function handleCredentialResponse(response) {
@@ -17,6 +18,11 @@ export function Modal() {
       document.querySelector('.modalBackdrop').style.display= 'none'
       document.querySelector('body').style['overflow-y'] = 'auto';
     }
+
+    if(!google.accounts){
+      setTimeout(()=>{updater+='a'; console.log('updated'); return;}, 1000)
+    }
+
     google.accounts.id.initialize({
       client_id: process.env.REACT_APP_GOOGLEID,
       callback: handleCredentialResponse
@@ -33,7 +39,7 @@ export function Modal() {
 
     document.querySelector('.modalBackdrop').style.display = 'block'
     document.querySelector('body').style['overflow-y'] = 'hidden';
-  }, []);
+  }, [updater]);
 
   return (
     <div className="modalBackdrop"> 
