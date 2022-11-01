@@ -27,7 +27,7 @@ export function Modal() {
     );
     
     document.querySelector('.modalBackdrop').style.display = 'block'
-    document.querySelector('body').style['overflow-y'] = 'auto';
+    document.querySelector('body').style['overflow-y'] = 'hidden';
   }, []);
 
   return (

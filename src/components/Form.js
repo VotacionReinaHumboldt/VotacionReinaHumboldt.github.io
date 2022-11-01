@@ -9,9 +9,14 @@ function Form() {
 
   const { mail } = useContext(mailContext);
 
+  const fixMissingMail = () => {
+    document.querySelector('.modalBackdrop').style.display = 'block'
+    document.querySelector('body').style['overflow-y'] = 'hidden';
+  }
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    if(!mail){alert('error'); return;}
+    if(!mail){fixMissingMail(); return;}
     let formData = new FormData();
     let checkedButton = Object.values(document.querySelectorAll('[name="voto"]'))
                           .filter(el => el.checked)
