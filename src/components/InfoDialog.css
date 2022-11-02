@@ -1,0 +1,122 @@
+.infoModalBackdrop
+{
+  background-color: #2b2d42be;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+}
+
+.infoModalDiv
+{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoModal
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #8D99AE;
+  width: 90%;
+  height: fit-content;
+  min-height: 10rem;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: 0 8px 1rem rgba(20, 20, 20, 0.75);
+}
+
+.errorIcon
+{
+  fill: #CB3234;
+  width: 3rem;
+  height: 3rem;
+}
+
+.successIcon
+{
+  fill: #008F39;
+  width: 3rem;
+  height: 3rem;
+}
+
+.infoModalText
+{
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.load 
+{
+  width: 175px;
+  height: 80px;
+  display: block;
+  margin: auto;
+  background-image: radial-gradient(circle 25px at 25px 25px, #EDF2F4 100%, transparent 0), radial-gradient(circle 50px at 50px 50px, #EDF2F4 100%, transparent 0), radial-gradient(circle 25px at 25px 25px, #EDF2F4 100%, transparent 0), linear-gradient(#EDF2F4 50px, transparent 0);
+  background-size: 50px 50px, 100px 76px, 50px 50px, 120px 40px;
+  background-position: 0px 30px, 37px 0px, 122px 30px, 25px 40px;
+  background-repeat: no-repeat;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.load::after 
+{
+  content: '';  
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, 0);
+  position: absolute;
+  border: 15px solid transparent;
+  border-bottom-color: #D90429;
+  box-sizing: border-box;
+  animation: fadePull 1s linear infinite;
+}
+
+.load::before 
+{
+  content: '';  
+  left: 50%;
+  bottom: 15px;
+  transform: translate(-50%, 0);
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #D90429;
+  box-sizing: border-box;
+  animation: fadePull 1s linear infinite;
+}
+
+@keyframes fadePull 
+{
+  0% {
+    transform: translate(-50%, 15px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, 0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -15px);
+    opacity: 0;
+  }
+}
+
+
+@media screen and (min-width: 800px) {
+  .infoModal
+  {
+    width: 50%;
+  }
+}

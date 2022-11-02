@@ -1,4 +1,4 @@
-.errorModalReloadBtn
+.infoModalReloadBtn
 {
   background-color: #EF233C;
   margin-top: 1.5rem;
@@ -14,7 +14,7 @@
 
 
 @media (hover: hover) {
-  .errorModalReloadBtn:hover 
+  .infoModalReloadBtn:hover 
   {
     background-color: #D90429;
     transform: scale(1.01);

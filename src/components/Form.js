@@ -23,10 +23,12 @@ function Form() {
     formData.append('EMail', mail)
     formData.append('Voto', checkedButton[0].value)
     
-    document.querySelector('.errorModalBackdrop').style.display = 'block';
+    document.querySelector('.infoModalBackdrop').style.display = 'block';
     document.querySelector('.load').style.display = 'block';
-    document.querySelector('.errorModalReloadBtn').style.display = 'none';
-    document.querySelector('.errorModalText').style.display = 'none';
+    document.querySelector('.infoModalReloadBtn').style.display = 'none';
+    document.querySelector('.infoModalText').style.display = 'none';
+    document.querySelector('.errorIcon').style.display = 'none';
+    document.querySelector('.successIcon').style.display = 'none';
 
     const serverResponse = await fetch(process.env.REACT_APP_URL, { method: 'POST', body: formData});
     handleServerResponse(serverResponse);
@@ -36,23 +38,25 @@ function Form() {
     const serverResponseJSON = await response.json();
     console.log(serverResponseJSON);
     if(serverResponseJSON.result === 'error'){
+
+      document.querySelector('.errorIcon').style.display = 'block';
+
       if(serverResponseJSON.message === 'invalid mail'){
-        document.querySelector('.errorModalText').innerHTML = `<p className="errorModalText"><strong>Error: </strong> correo invalido</p>`
-        
+        document.querySelector('.infoModalText').innerHTML = `<p className="infoModalText"><strong>Error: </strong> correo invalido</p>`
 
       } else if(serverResponseJSON.message === 'voted'){
-        document.querySelector('.errorModalText').innerHTML =`<p className="errorModalText"><strong>Error: </strong> este correo ya cuenta con un voto registrado</p>`;
+        document.querySelector('.infoModalText').innerHTML =`<p className="infoModalText"><strong>Error: </strong> este correo ya cuenta con un voto registrado</p>`;
         
 
       }
     } else if (serverResponseJSON.result === 'success'){
-      document.querySelector('.errorModalText').innerHTML = `<p className="errorModalText"><strong>Voto registrado, </strong>¡Muchas gracias por participar!</p> <ReloadBtn />`;
-      
+      document.querySelector('.successIcon').style.display = 'block';
+      document.querySelector('.infoModalText').innerHTML = `<p className="infoModalText"><strong>Voto registrado, </strong>¡Muchas gracias por participar!</p> <ReloadBtn />`;
     }
 
-    document.querySelector('.errorModalText').style.display = 'block';
+    document.querySelector('.infoModalText').style.display = 'block';
     document.querySelector('.load').style.display = 'none';
-    document.querySelector('.errorModalReloadBtn').style.display = 'block';
+    document.querySelector('.infoModalReloadBtn').style.display = 'block';
   }
 
   return (

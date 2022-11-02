@@ -6,10 +6,9 @@ import './Modal.css';
 
 /*global google*/
 
-export function Modal() {
+function Modal() {
 
   const { setMail } = useContext(mailContext);
-  let updater = '';
 
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -48,7 +47,7 @@ export function Modal() {
 
     document.querySelector('.modalBackdrop').style.display = 'block'
     document.querySelector('body').style['overflow-y'] = 'hidden';
-  }, [updater]);
+  }, []);
 
   return (
     <div className="modalBackdrop"> 
@@ -61,3 +60,5 @@ export function Modal() {
     </div>
   );
 }
+
+export default Modal;

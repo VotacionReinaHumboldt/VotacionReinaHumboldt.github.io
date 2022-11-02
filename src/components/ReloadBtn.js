@@ -5,14 +5,14 @@ import './ReloadBtn.css'
 function ReloadBtn() {
 
   useEffect(() => {
-    document.querySelector('.errorModalReloadBtn')
+    document.querySelector('.infoModalReloadBtn')
       .addEventListener('click', () => {
-        window.location.reload()
+        window.location.reload();
       }, false)
   })
 
   return (
-    <button className="errorModalReloadBtn">Entendido</button>
+    <button className="infoModalReloadBtn">Entendido</button>
   )
 }
 
