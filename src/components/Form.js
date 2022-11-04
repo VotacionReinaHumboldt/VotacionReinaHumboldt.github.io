@@ -41,22 +41,23 @@ function Form() {
 
       document.querySelector('.errorIcon').style.display = 'block';
 
-      if(serverResponseJSON.message === 'invalid mail'){
+      if(serverResponseJSON.message === 'invalid mail') {
         document.querySelector('.infoModalText').innerHTML = `<p className="infoModalText"><strong>Error: </strong> correo invalido</p>`
-
-      } else if(serverResponseJSON.message === 'voted'){
+        document.querySelector('.infoModalReloadBtn').style.display = 'block';
+      } else if(serverResponseJSON.message === 'voted') {
         document.querySelector('.infoModalText').innerHTML =`<p className="infoModalText"><strong>Error: </strong> este correo ya cuenta con un voto registrado</p>`;
-        
-
+        document.querySelector('.infoModalReloadBtn').style.display = 'block';
+      } else if (serverResponseJSON.message === 'time exceeded') {
+        document.querySelector('.infoModalText').innerHTML =`<strong>Error</strong> el tiempo de votación terminó ¡Gracias a todos por su participación!`;
       }
-    } else if (serverResponseJSON.result === 'success'){
+    } else if (serverResponseJSON.result === 'success') {
       document.querySelector('.successIcon').style.display = 'block';
       document.querySelector('.infoModalText').innerHTML = `<p className="infoModalText"><strong>Voto registrado, </strong>¡Muchas gracias por participar!</p> <ReloadBtn />`;
+      document.querySelector('.infoModalReloadBtn').style.display = 'block';
     }
 
     document.querySelector('.infoModalText').style.display = 'block';
     document.querySelector('.load').style.display = 'none';
-    document.querySelector('.infoModalReloadBtn').style.display = 'block';
   }
 
   return (

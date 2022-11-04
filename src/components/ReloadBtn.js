@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import './ReloadBtn.css'
 
-function ReloadBtn() {
+function ReloadBtn({noTime}) {
 
   useEffect(() => {
     document.querySelector('.infoModalReloadBtn')
@@ -12,7 +12,7 @@ function ReloadBtn() {
   })
 
   return (
-    <button className="infoModalReloadBtn">Entendido</button>
+    <button className="infoModalReloadBtn" style={{'display': noTime ? 'none' : ''}}>Entendido</button>
   )
 }
 
