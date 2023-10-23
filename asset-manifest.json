@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/VotacionReinaHumboldt/VotacionReinaHumboldt.github.io/static/css/main.70228b83.css",
+    "main.js": "/VotacionReinaHumboldt/VotacionReinaHumboldt.github.io/static/js/main.8b8a10af.js",
+    "static/media/backgroundHumboldt.webp": "/VotacionReinaHumboldt/VotacionReinaHumboldt.github.io/static/media/backgroundHumboldt.1f3ed8fbdb6e64d0afde.webp",
+    "index.html": "/VotacionReinaHumboldt/VotacionReinaHumboldt.github.io/index.html",
+    "main.70228b83.css.map": "/VotacionReinaHumboldt/VotacionReinaHumboldt.github.io/static/css/main.70228b83.css.map",
+    "main.8b8a10af.js.map": "/VotacionReinaHumboldt/VotacionReinaHumboldt.github.io/static/js/main.8b8a10af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70228b83.css",
+    "static/js/main.8b8a10af.js"
+  ]
+}
