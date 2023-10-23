@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/VotacionReinaHumboldt/VotacionReinaHumboldt.github.io/static/css/main.70228b83.css",
-    "main.js": "/VotacionReinaHumboldt/VotacionReinaHumboldt.github.io/static/js/main.8b8a10af.js",
-    "static/media/backgroundHumboldt.webp": "/VotacionReinaHumboldt/VotacionReinaHumboldt.github.io/static/media/backgroundHumboldt.1f3ed8fbdb6e64d0afde.webp",
-    "index.html": "/VotacionReinaHumboldt/VotacionReinaHumboldt.github.io/index.html",
-    "main.70228b83.css.map": "/VotacionReinaHumboldt/VotacionReinaHumboldt.github.io/static/css/main.70228b83.css.map",
-    "main.8b8a10af.js.map": "/VotacionReinaHumboldt/VotacionReinaHumboldt.github.io/static/js/main.8b8a10af.js.map"
+    "main.css": "./static/css/main.ec7d27ba.css",
+    "main.js": "./static/js/main.d3f7f893.js",
+    "static/media/backgroundHumboldt.webp": "./static/media/backgroundHumboldt.1f3ed8fbdb6e64d0afde.webp",
+    "index.html": "./index.html",
+    "main.ec7d27ba.css.map": "./static/css/main.ec7d27ba.css.map",
+    "main.d3f7f893.js.map": "./static/js/main.d3f7f893.js.map"
   },
   "entrypoints": [
-    "static/css/main.70228b83.css",
-    "static/js/main.8b8a10af.js"
+    "static/css/main.ec7d27ba.css",
+    "static/js/main.d3f7f893.js"
   ]
 }
